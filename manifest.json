@@ -4,5 +4,6 @@
     "origin": "https://github.com/tapias2000/AMPTemplates.git",
     "url": "https://github.com/tapias2000/AMPTemplates",
     "imagefile": "",
-    "prefix": "Tapias2000"
+    "prefix": "",
+    "repotype": "AppTemplates"
 }
