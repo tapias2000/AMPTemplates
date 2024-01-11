@@ -1,0 +1,257 @@
+[
+    {
+        "DisplayName":"Profile ID",
+        "Category":"Subsistence Server Settings",
+        "Description":"Must be a value between 1 to 5. Can be used to store 5 seperate saves on a single server instance.",
+        "Keywords":"",
+        "FieldName":"ProfileId",
+        "InputType":"number",
+        "ParamFieldName":"ProfileId",
+        "DefaultValue":"1",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Server Name",
+        "Category":"Subsistence Server Settings",
+        "Description":"The name that will show in the in-game server list. Please replace with your own server name. Maximum of 64 characters allowed.",
+        "Keywords":"",
+        "FieldName":"ServerName",
+        "InputType":"text",
+        "ParamFieldName":"ServerName",
+        "DefaultValue":"AMP Powered Subsistence Server",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Server Description",
+        "Category":"Subsistence Server Settings",
+        "Description":"An optional short description of the server, which will show when a player clicks on the server in server list. Max length of 256 characters.",
+        "Keywords":"",
+        "FieldName":"ServerDescription",
+        "InputType":"text",
+        "ParamFieldName":"ServerDescription",
+        "DefaultValue":"Welcome to Subsistence!",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Hosted By",
+        "Category":"Subsistence Server Settings",
+        "Description":"The name that will show in the in-game server list for who is hosting this server. Maximum of 64 characters allowed.",
+        "Keywords":"",
+        "FieldName":"HostedByName",
+        "InputType":"text",
+        "ParamFieldName":"HostedByName",
+        "DefaultValue":"CubeCoders AMP",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Hunters Enabled",
+        "Category":"Subsistence Server Settings",
+        "Description":"Whether hunters are enabled on the server.",
+        "Keywords":"",
+        "FieldName":"HuntersEnabled",
+        "InputType":"checkbox",
+        "ParamFieldName":"HuntersEnabled",
+        "DefaultValue":"true",
+        "EnumValues":{
+            "False":"false",
+            "True":"true"
+        }
+    },
+    {
+        "DisplayName":"Hunters Attacks",
+        "Category":"Subsistence Server Settings",
+        "Description":"0 == normal attacks. 1 == only revenge attacks. 2 == no attacks.",
+        "Keywords":"",
+        "FieldName":"HunterAttacks",
+        "InputType":"number",
+        "MinValue":"0",
+        "ParamFieldName":"HunterAttacks",
+        "DefaultValue":"0",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Difficulty",
+        "Category":"Subsistence Server Settings",
+        "Description":"Values: easy/normal/hardcore",
+        "Keywords":"",
+        "FieldName":"Difficulty",
+        "InputType":"enum",
+        "ParamFieldName":"Difficulty",
+        "DefaultValue":"normal",
+        "EnumValues":{
+            "easy":"easy",
+            "normal":"normal",
+            "hardcore":"hardcore"
+        }
+    },
+    {
+        "DisplayName":"In game Day",
+        "Category":"Subsistence Server Settings",
+        "Description":"Number of in-game days per in-game year. Values need to be: 12/24/36/48/60/90/120/200/365",
+        "Keywords":"",
+        "FieldName":"DaysPerYear",
+        "InputType":"enum",
+        "ParamFieldName":"DaysPerYear",
+        "DefaultValue":"36",
+        "EnumValues":{
+            "12":"12",
+            "24":"24",
+            "36":"36",
+            "48":"48",
+            "60":"60",
+            "90":"90",
+            "120":"120",
+            "200":"200",
+            "365":"365"
+        }
+    },
+    {
+        "DisplayName":"Month Override",
+        "Category":"Subsistence Server Settings",
+        "Description":"When set, will allow the server to start in a particular month (overriding whatever is set in the current save file). This value will be reset to -1 once the server has launched, and will continue using what is stored in the save file for future launches.",
+        "Keywords":"",
+        "FieldName":"MonthOverride",
+        "InputType":"enum",
+        "ParamFieldName":"MonthOverride",
+        "DefaultValue":"-1",
+        "EnumValues":{
+            "Jan":"0",
+            "Feb":"1",
+            "March":"2",
+            "April":"3",
+            "May":"4",
+            "Jun":"5",
+            "Jul":"6",
+            "Aug":"7",
+            "Sep":"8",
+            "Oct":"9",
+            "Nov":"10",
+            "Dec":"11"
+        }
+    },
+    {
+        "DisplayName":"Server Password",
+        "Category":"Subsistence Server Settings",
+        "Description":"Password that players must use to join the server. Leave blank to allow anyone to join.",
+        "Keywords":"",
+        "FieldName":"Password",
+        "InputType":"password",
+        "ParamFieldName":"Password",
+        "DefaultValue":"testme",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Admin Server Password",
+        "Category":"Subsistence Server Settings",
+        "Description":"Password that admins should use to login to the server.",
+        "Keywords":"",
+        "FieldName":"AdminPassword",
+        "InputType":"password",
+        "ParamFieldName":"AdminPassword",
+        "DefaultValue":"someAdminPasswword",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Player Limit",
+        "Category":"Subsistence Server Settings",
+        "Description":"Sets the maximum number of players allowed on the server",
+        "Keywords":"",
+        "FieldName":"MaxPlayers",
+        "InputType":"number",
+        "MinValue":"1",
+        "ParamFieldName":"MaxPlayers",
+        "DefaultValue":"32",
+        "Placeholder":"70",
+        "EnumValues":{}  
+    },
+    {
+        "DisplayName":"Player Off line Hours",
+        "Category":"Subsistence Server Settings",
+        "Description":"umber of real-world hours that a player (and their team-mates) are offline from the server before their base starts to decay. Use this setting to keep servers clean of old abandoned bases. Set to 0 for no base decay. It is recommended to set this value for public servers (example: 4 days would be 96).",
+        "Keywords":"",
+        "FieldName":"NumPlayerOfflineHoursBeforeBaseDecay",
+        "InputType":"number",
+        "MinValue":"0",
+        "ParamFieldName":"NumPlayerOfflineHoursBeforeBaseDecay",
+        "DefaultValue":"0",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"PvP Damage",
+        "Category":"Subsistence Server Settings",
+        "Description":"If true, players can damage other players.",
+        "Keywords":"",
+        "FieldName":"PvPDamage",
+        "InputType":"checkbox",
+        "ParamFieldName":"PvPDamage",
+        "DefaultValue":"true",
+        "EnumValues":{
+            "False":"false",
+            "True":"true"
+        }
+    },
+    {
+        "DisplayName":"Damage Player Bases",
+        "Category":"Subsistence Server Settings",
+        "Description":"If true, players can damage player-placed buildables.",
+        "Keywords":"",
+        "FieldName":"PlayersCanDamagePlayerBases",
+        "InputType":"checkbox",
+        "ParamFieldName":"PlayersCanDamagePlayerBases",
+        "DefaultValue":"true",
+        "EnumValues":{
+            "False":"false",
+            "True":"true"
+        }
+    },
+    {
+        "DisplayName":"Enemy Player Base Items",
+        "Category":"Subsistence Server Settings",
+        "Description":"If true, players can access enemy player base items (such as storage chests, refineries, etc). Does not affect doors/windows/hatches.",
+        "Keywords":"",
+        "FieldName":"PlayersCanAccessEnemyPlayerBaseItems",
+        "InputType":"checkbox",
+        "ParamFieldName":"PlayersCanAccessEnemyPlayerBaseItems",
+        "DefaultValue":"true",
+        "EnumValues":{
+            "False":"false",
+            "True":"true"
+        }
+    },
+    {
+        "DisplayName":"Web Service",
+        "Category":"Subsistence Web Setting",
+        "Description":"Enable the web service on your server",
+        "Keywords":"",
+        "FieldName":"bEnabled",
+        "InputType":"checkbox",
+        "ParamFieldName":"bEnabled",
+        "DefaultValue":"false",
+        "EnumValues":{
+            "False":"false",
+            "True":"true"
+        }
+    },
+    {
+        "DisplayName":"Admin Web Service UserName",
+        "Category":"Subsistence Web Setting",
+        "Description":"Username that admins should use to login to the Web Service API.",
+        "Keywords":"",
+        "FieldName":"AdminWebUsername",
+        "InputType":"text",
+        "ParamFieldName":"AdminWebUsername",
+        "DefaultValue":"",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Admin Web Service Password",
+        "Category":"Subsistence Web Setting",
+        "Description":"Password that admins should use to login to the Web Service API.",
+        "Keywords":"",
+        "FieldName":"AdminWebPassword",
+        "InputType":"password",
+        "ParamFieldName":"AdminWebPassword",
+        "DefaultValue":"",
+        "EnumValues":{}
+    }
+]

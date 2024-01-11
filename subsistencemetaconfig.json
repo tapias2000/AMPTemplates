@@ -1,0 +1,14 @@
+[
+    {
+        "ConfigFile":"UDKGame/Config/UDKDedServerSettings.ini",
+        "AutoMap":true,
+        "ConfigType":"ini",
+        "ConfigFormat":"{0}=\"{1}\"",
+        "ConfigFormatRegex":"^(?<key>.+?)=\"?(?<value>.+?)?\"?$"
+    },
+    {
+        "ConfigFile":"UDKGame/Config/UDKWeb.ini",
+        "AutoMap":true,
+        "ConfigType":"ini"
+    }
+]
