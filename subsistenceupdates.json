@@ -9,28 +9,19 @@
         "UpdateSourceVersion":"{{ServerBranch}}"
     },
     {
-        "UpdateStageName":"Config Directory Creation",
+        "UpdateStageName":"ServerSettings File Copy",
         "UpdateSourcePlatform":"All",
-        "UpdateSource":"CreateDirectory",
-        "UpdateSourceArgs":"{{$FullBaseDir}}UDKGame/Config/",
+        "UpdateSource":"CopyFilePath",
+        "UpdateSourceData":"{{$FullBaseDir}}UDKGame/Config/UDKDedServerSettings.ini",
+        "UpdateSourceArgs":"{{$FullBaseDir}}UDKGame/Config/DefaultDedServerSettings.ini",
         "OverwriteExistingFiles":false
     },
     {
-        "UpdateStageName":"UDKDedServerSettings.ini Config Download",
+        "UpdateStageName":"ServerSettings File Copy",
         "UpdateSourcePlatform":"All",
-        "UpdateSource":"FetchURL",
-        "UpdateSourceData":"https://github.com/tapias2000/AMPTemplates/subsistence-UDKDedServerSettings.ini",
-        "UpdateSourceArgs":"UDKDedServerSettings.ini",
-        "UpdateSourceTarget":"{{$FullBaseDir}}UDKGame/Config/",
-        "OverwriteExistingFiles":false
-    },
-    {
-        "UpdateStageName":"UDKWeb.ini Config Download",
-        "UpdateSourcePlatform":"All",
-        "UpdateSource":"FetchURL",
-        "UpdateSourceData":"https://github.com/tapias2000/AMPTemplates/subsistence-UDKWeb.ini",
-        "UpdateSourceArgs":"UDKWeb.ini",
-        "UpdateSourceTarget":"{{$FullBaseDir}}UDKGame/Config/",
+        "UpdateSource":"CopyFilePath",
+        "UpdateSourceData":"{{$FullBaseDir}}UDKGame/Config/UDKEngine.ini",
+        "UpdateSourceArgs":"{{$FullBaseDir}}UDKGame/Config/DefaultEngine.ini",
         "OverwriteExistingFiles":false
     },
     {
