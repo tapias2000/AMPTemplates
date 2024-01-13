@@ -12,6 +12,28 @@
         "EnumValues":{}
     },
     {
+        "DisplayName":"Game Port",
+        "Category":"Subsistence Server Settings",
+        "Description":"",
+        "Keywords":"",
+        "FieldName":"$GamePort",
+        "InputType":"number",
+        "Hidden":true,
+        "ParamFieldName":"URL.Port",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Query Port",
+        "Category":"Subsistence Server Settings",
+        "Description":"",
+        "Keywords":"",
+        "FieldName":"$QueryPort",
+        "InputType":"number",
+        "Hidden":true,
+        "ParamFieldName":"OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.QueryPort",
+        "EnumValues":{}
+    },
+    {
         "DisplayName":"Server Name",
         "Category":"Subsistence Server Settings",
         "Description":"The name that will show in the in-game server list. Please replace with your own server name. Maximum of 64 characters allowed.",
@@ -64,11 +86,14 @@
         "Description":"0 == normal attacks. 1 == only revenge attacks. 2 == no attacks.",
         "Keywords":"",
         "FieldName":"HunterAttacks",
-        "InputType":"number",
-        "MinValue":"0",
+        "InputType":"enum",
         "ParamFieldName":"ColdGame.ColdDedServerSettings.HunterAttacks",
         "DefaultValue":"0",
-        "EnumValues":{}
+        "EnumValues":{
+            "0":"Normal attacks (default)",
+            "1":"Revenge attacks only",
+            "2":"No attacks"
+        }
     },
     {
         "DisplayName":"Difficulty",
@@ -116,18 +141,19 @@
         "ParamFieldName":"ColdGame.ColdDedServerSettings.MonthOverride",
         "DefaultValue":"-1",
         "EnumValues":{
-            "Jan":"0",
-            "Feb":"1",
-            "March":"2",
-            "April":"3",
-            "May":"4",
-            "Jun":"5",
-            "Jul":"6",
-            "Aug":"7",
-            "Sep":"8",
-            "Oct":"9",
-            "Nov":"10",
-            "Dec":"11"
+            "-1":"No Override (default)",
+            "0":"Jan",
+            "1":"Feb",
+            "2":"March",
+            "3":"April",
+            "4":"May",
+            "5":"Jun",
+            "6":"Jul",
+            "7":"Aug",
+            "8":"Sep",
+            "9":"Oct",
+            "10":"Nov",
+            "11":"Dec"
         }
     },
     {
@@ -149,7 +175,7 @@
         "FieldName":"AdminPassword",
         "InputType":"password",
         "ParamFieldName":"ColdGame.ColdDedServerSettings.AdminPassword",
-        "DefaultValue":"someAdminPasswword",
+        "DefaultValue":"{{newguid()}}",
         "EnumValues":{}
     },
     {
@@ -160,9 +186,11 @@
         "FieldName":"MaxPlayers",
         "InputType":"number",
         "MinValue":"1",
+        "MaxValue":"32",
         "ParamFieldName":"ColdGame.ColdDedServerSettings.MaxPlayers",
         "DefaultValue":"32",
-        "Placeholder":"70",
+        "Placeholder":"32",
+        "Suffix":"players",
         "EnumValues":{}  
     },
     {
@@ -175,6 +203,8 @@
         "MinValue":"0",
         "ParamFieldName":"ColdGame.ColdDedServerSettings.NumPlayerOfflineHoursBeforeBaseDecay",
         "DefaultValue":"0",
+        "Placeholder":"0",
+        "Suffix":"hours",
         "EnumValues":{}
     },
     {
@@ -218,41 +248,5 @@
             "False":"false",
             "True":"true"
         }
-    },
-    {
-        "DisplayName":"Web Service",
-        "Category":"Subsistence Web Setting",
-        "Description":"Enable the web service on your server",
-        "Keywords":"",
-        "FieldName":"bEnabled",
-        "InputType":"checkbox",
-        "ParamFieldName":"bEnabled",
-        "DefaultValue":"false",
-        "EnumValues":{
-            "False":"false",
-            "True":"true"
-        }
-    },
-    {
-        "DisplayName":"Admin Web Service UserName",
-        "Category":"Subsistence Web Setting",
-        "Description":"Username that admins should use to login to the Web Service API.",
-        "Keywords":"",
-        "FieldName":"AdminWebUsername",
-        "InputType":"text",
-        "ParamFieldName":"AdminWebUsername",
-        "DefaultValue":"",
-        "EnumValues":{}
-    },
-    {
-        "DisplayName":"Admin Web Service Password",
-        "Category":"Subsistence Web Setting",
-        "Description":"Password that admins should use to login to the Web Service API.",
-        "Keywords":"",
-        "FieldName":"AdminWebPassword",
-        "InputType":"password",
-        "ParamFieldName":"AdminWebPassword",
-        "DefaultValue":"",
-        "EnumValues":{}
     }
 ]
