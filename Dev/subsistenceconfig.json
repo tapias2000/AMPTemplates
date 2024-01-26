@@ -6,8 +6,31 @@
         "Keywords":"",
         "FieldName":"ProfileId",
         "InputType":"number",
-        "ParamFieldName":"ProfileId",
+        "Hidden":true,
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.ProfileId",
         "DefaultValue":"1",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Game Port",
+        "Category":"Subsistence Server Settings",
+        "Description":"",
+        "Keywords":"",
+        "FieldName":"$GamePort",
+        "InputType":"number",
+        "Hidden":true,
+        "ParamFieldName":"URL.Port",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Query Port",
+        "Category":"Subsistence Server Settings",
+        "Description":"",
+        "Keywords":"",
+        "FieldName":"$QueryPort",
+        "InputType":"number",
+        "Hidden":true,
+        "ParamFieldName":"OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.QueryPort",
         "EnumValues":{}
     },
     {
@@ -17,7 +40,7 @@
         "Keywords":"",
         "FieldName":"ServerName",
         "InputType":"text",
-        "ParamFieldName":"ServerName",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.ServerName",
         "DefaultValue":"AMP Powered Subsistence Server",
         "EnumValues":{}
     },
@@ -28,7 +51,7 @@
         "Keywords":"",
         "FieldName":"ServerDescription",
         "InputType":"text",
-        "ParamFieldName":"ServerDescription",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.ServerDescription",
         "DefaultValue":"Welcome to Subsistence!",
         "EnumValues":{}
     },
@@ -39,7 +62,7 @@
         "Keywords":"",
         "FieldName":"HostedByName",
         "InputType":"text",
-        "ParamFieldName":"HostedByName",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.HostedByName",
         "DefaultValue":"CubeCoders AMP",
         "EnumValues":{}
     },
@@ -50,7 +73,7 @@
         "Keywords":"",
         "FieldName":"HuntersEnabled",
         "InputType":"checkbox",
-        "ParamFieldName":"HuntersEnabled",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.HuntersEnabled",
         "DefaultValue":"true",
         "EnumValues":{
             "False":"false",
@@ -63,11 +86,14 @@
         "Description":"0 == normal attacks. 1 == only revenge attacks. 2 == no attacks.",
         "Keywords":"",
         "FieldName":"HunterAttacks",
-        "InputType":"number",
-        "MinValue":"0",
-        "ParamFieldName":"HunterAttacks",
+        "InputType":"enum",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.HunterAttacks",
         "DefaultValue":"0",
-        "EnumValues":{}
+        "EnumValues":{
+            "0":"Normal attacks (default)",
+            "1":"Revenge attacks only",
+            "2":"No attacks"
+        }
     },
     {
         "DisplayName":"Difficulty",
@@ -76,7 +102,7 @@
         "Keywords":"",
         "FieldName":"Difficulty",
         "InputType":"enum",
-        "ParamFieldName":"Difficulty",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.Difficulty",
         "DefaultValue":"normal",
         "EnumValues":{
             "easy":"easy",
@@ -91,7 +117,7 @@
         "Keywords":"",
         "FieldName":"DaysPerYear",
         "InputType":"enum",
-        "ParamFieldName":"DaysPerYear",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.DaysPerYear",
         "DefaultValue":"36",
         "EnumValues":{
             "12":"12",
@@ -112,21 +138,22 @@
         "Keywords":"",
         "FieldName":"MonthOverride",
         "InputType":"enum",
-        "ParamFieldName":"MonthOverride",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.MonthOverride",
         "DefaultValue":"-1",
         "EnumValues":{
-            "Jan":"0",
-            "Feb":"1",
-            "March":"2",
-            "April":"3",
-            "May":"4",
-            "Jun":"5",
-            "Jul":"6",
-            "Aug":"7",
-            "Sep":"8",
-            "Oct":"9",
-            "Nov":"10",
-            "Dec":"11"
+            "-1":"No Override (default)",
+            "0":"Jan",
+            "1":"Feb",
+            "2":"March",
+            "3":"April",
+            "4":"May",
+            "5":"Jun",
+            "6":"Jul",
+            "7":"Aug",
+            "8":"Sep",
+            "9":"Oct",
+            "10":"Nov",
+            "11":"Dec"
         }
     },
     {
@@ -136,7 +163,7 @@
         "Keywords":"",
         "FieldName":"Password",
         "InputType":"password",
-        "ParamFieldName":"Password",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.Password",
         "DefaultValue":"testme",
         "EnumValues":{}
     },
@@ -147,8 +174,8 @@
         "Keywords":"",
         "FieldName":"AdminPassword",
         "InputType":"password",
-        "ParamFieldName":"AdminPassword",
-        "DefaultValue":"someAdminPasswword",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.AdminPassword",
+        "DefaultValue":"{{newguid()}}",
         "EnumValues":{}
     },
     {
@@ -159,9 +186,11 @@
         "FieldName":"MaxPlayers",
         "InputType":"number",
         "MinValue":"1",
-        "ParamFieldName":"MaxPlayers",
+        "MaxValue":"32",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.MaxPlayers",
         "DefaultValue":"32",
-        "Placeholder":"70",
+        "Placeholder":"32",
+        "Suffix":"players",
         "EnumValues":{}  
     },
     {
@@ -172,8 +201,10 @@
         "FieldName":"NumPlayerOfflineHoursBeforeBaseDecay",
         "InputType":"number",
         "MinValue":"0",
-        "ParamFieldName":"NumPlayerOfflineHoursBeforeBaseDecay",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.NumPlayerOfflineHoursBeforeBaseDecay",
         "DefaultValue":"0",
+        "Placeholder":"0",
+        "Suffix":"hours",
         "EnumValues":{}
     },
     {
@@ -183,7 +214,7 @@
         "Keywords":"",
         "FieldName":"PvPDamage",
         "InputType":"checkbox",
-        "ParamFieldName":"PvPDamage",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.PvPDamage",
         "DefaultValue":"true",
         "EnumValues":{
             "False":"false",
@@ -197,7 +228,7 @@
         "Keywords":"",
         "FieldName":"PlayersCanDamagePlayerBases",
         "InputType":"checkbox",
-        "ParamFieldName":"PlayersCanDamagePlayerBases",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.PlayersCanDamagePlayerBases",
         "DefaultValue":"true",
         "EnumValues":{
             "False":"false",
@@ -211,47 +242,11 @@
         "Keywords":"",
         "FieldName":"PlayersCanAccessEnemyPlayerBaseItems",
         "InputType":"checkbox",
-        "ParamFieldName":"PlayersCanAccessEnemyPlayerBaseItems",
+        "ParamFieldName":"ColdGame.ColdDedServerSettings.PlayersCanAccessEnemyPlayerBaseItems",
         "DefaultValue":"true",
         "EnumValues":{
             "False":"false",
             "True":"true"
         }
-    },
-    {
-        "DisplayName":"Web Service",
-        "Category":"Subsistence Web Setting",
-        "Description":"Enable the web service on your server",
-        "Keywords":"",
-        "FieldName":"bEnabled",
-        "InputType":"checkbox",
-        "ParamFieldName":"bEnabled",
-        "DefaultValue":"false",
-        "EnumValues":{
-            "False":"false",
-            "True":"true"
-        }
-    },
-    {
-        "DisplayName":"Admin Web Service UserName",
-        "Category":"Subsistence Web Setting",
-        "Description":"Username that admins should use to login to the Web Service API.",
-        "Keywords":"",
-        "FieldName":"AdminWebUsername",
-        "InputType":"text",
-        "ParamFieldName":"AdminWebUsername",
-        "DefaultValue":"",
-        "EnumValues":{}
-    },
-    {
-        "DisplayName":"Admin Web Service Password",
-        "Category":"Subsistence Web Setting",
-        "Description":"Password that admins should use to login to the Web Service API.",
-        "Keywords":"",
-        "FieldName":"AdminWebPassword",
-        "InputType":"password",
-        "ParamFieldName":"AdminWebPassword",
-        "DefaultValue":"",
-        "EnumValues":{}
     }
 ]

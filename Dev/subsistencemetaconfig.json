@@ -7,7 +7,7 @@
         "ConfigFormatRegex":"^(?<key>.+?)=\"?(?<value>.+?)?\"?$"
     },
     {
-        "ConfigFile":"UDKGame/Config/UDKWeb.ini",
+        "ConfigFile":"UDKGame/Config/UDKEngine.ini", 
         "AutoMap":true,
         "ConfigType":"ini"
     }
