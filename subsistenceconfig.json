@@ -248,5 +248,19 @@
             "False":"false",
             "True":"true"
         }
+    },
+    {
+        "DisplayName":"Server Branch",
+        "Category":"SteamCMD and Updates",
+        "Description":"Sets the server branch to install. NOTE: Update the server after changing this setting!",
+        "Keywords":"branch,beta,public",
+        "FieldName":"ServerBranch",
+        "InputType":"enum",
+        "ParamFieldName":"ServerBranch",
+        "DefaultValue":"public",
+        "EnumValues":{
+            "public":"Public (default)",
+            "experimental":"Experimental"
+        }
     }
 ]
