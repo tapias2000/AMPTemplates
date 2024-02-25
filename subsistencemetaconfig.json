@@ -2,9 +2,7 @@
     {
         "ConfigFile":"UDKGame/Config/UDKDedServerSettings.ini",
         "AutoMap":true,
-        "ConfigType":"ini",
-        "ConfigFormat":"{0}=\"{1}\"",
-        "ConfigFormatRegex":"^(?<key>.+?)=\"?(?<value>.+?)?\"?$"
+        "ConfigType":"ini"
     },
     {
         "ConfigFile":"UDKGame/Config/UDKEngine.ini", 

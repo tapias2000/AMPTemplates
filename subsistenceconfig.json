@@ -101,13 +101,13 @@
         "Description":"Values: easy/normal/hardcore",
         "Keywords":"",
         "FieldName":"Difficulty",
-        "InputType":"enum",
+        "InputType":"text",
         "ParamFieldName":"ColdGame.ColdDedServerSettings.Difficulty",
         "DefaultValue":"normal",
         "EnumValues":{
-            "easy":"easy",
-            "normal":"normal",
-            "hardcore":"hardcore"
+            "easy":"Easy",
+            "normal":"Normal (Default)",
+            "hardcore":"Hardcore"
         }
     },
     {
